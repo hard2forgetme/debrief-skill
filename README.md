@@ -11,6 +11,21 @@ It intentionally avoids Claude Code's built-in `/insights` name. Use Debrief whe
 - `/weekly_debrief`
 - `/weekly_debriefs`
 
+## Migration From Older Insight Names
+
+Debrief used to be packaged with `/insight`, `/insights`, `/weekly_insight`, and `/weekly_insights` command cards. Those names were removed to avoid colliding with Claude Code's built-in `/insights` command.
+
+Use this mapping:
+
+```text
+/insight          -> /debrief
+/insights         -> /debriefs
+/weekly_insight   -> /weekly_debrief
+/weekly_insights  -> /weekly_debriefs
+```
+
+If you installed an older copy, remove or archive the old command cards before installing Debrief so your agent does not expose both command families.
+
 ## Why Use This Instead Of Built-In Insights?
 
 - **Portable session roots:** works with exported or custom JSONL session directories, not only one tool's default history.
